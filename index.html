@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gaddam&#39;s Family by Sai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+	  <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+	  <script type = "text/javascript" src = "Script.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+        data.addRows([
+          [{v:'Tirupathaiyya,Chennamma', f:'Tirupathaiyya,Chennamma<div class="tier1" style="color:green; font-style:italic"><button onclick="JejiyaJeji()" type="button" style="color:green";>Jejiya,Jeji</button></div>'},
+           '', 'The President'],
+          [{v:'Prasad,Chennamma', f:'Prasad,Chennamma<div class="tier2" style="color:green; font-style:italic"><button onclick="PedananaPedamma()" type="button" style="color:green";>Pedanana,Pedamma</button></div>'},
+           'Tirupathaiyya,Chennamma', 'Pedanana,Pedamma'],
+		  [{v:'Lakshmi Narayana,Venkata Narayanamma', f:'Lakshmi Narayana,Venkata Narayanamma<div style="color:green; font-style:italic"><button onclick="DaddyMummy()" type="button" style="color:green";>Daddy,Mummy</button></div>'},
+           'Tirupathaiyya,Chennamma', 'Daddy,Mummy'],
+		  [{v:'Venkateswarlu,Indiramma', f:'Venkateswarlu,Indiramma<div style="color:green; font-style:italic"><button onclick="NLRbabaipinni()" type="button" style="color:green";>NLR Babai,Indira Pinni</button></div>'},
+           'Tirupathaiyya,Chennamma', 'NLR babai,,Indira Pinni'],
+		  [{v:'Rajendra,Satyavathi', f:'Rajendra,Satyavathi<div style="color:green; font-style:italic"><button onclick="Rajababaipinni()" type="button" style="color:green";>Raja Babai,Satyavathi Pinni</button></div>'},
+           'Tirupathaiyya,Chennamma', 'Raja Babai,Satyavathi Pinni'],
+		   
+		  [{v:'Venu Gopal,Manoji', f:'Venu,Manoji<div style="color:green; font-style:italic"><button onclick="VenuAnnaVadina()" type="button" style="color:green";>Venu Anna,Vadina</button></div>'},
+           'Prasad,Chennamma', 'Venu Annaya,Vadina'],
+		  [{v:'Narayanamma,China Narayana', f:'Narayanamma,China Narayana<div style="color:green; font-style:italic"><button onclick="Narayana()" type="button" style="color:green";>Narayanakka,Narayana Mavayya</button></div>'},
+           'Prasad,Chennamma', 'Narayanakka,Mavayya'],
+		  [{v:'Padma,Naveen', f:'Padma,Naveen<div style="color:green; font-style:italic"><button onclick="PadmaNaveen()" type="button" style="color:green";>Padmakka,Naveen Bava</button></div>'},
+           'Prasad,Chennamma', 'Padmakka,Naveen Bava'],
+		  [{v:'Mohan', f:'Mohan<div style="color:green; font-style:italic"><button onclick="Mohan()" type="button" style="color:green";>Chinnodu</button></div>'},
+           'Prasad,Chennamma', 'Chinnodu'],
+		  [{v:'Sai Kumar', f:'Sai Kumar<div style="color:green; font-style:italic"><button onclick="Me()" type="button" style="color:green";>Me</button></div>'},
+           'Lakshmi Narayana,Venkata Narayanamma', 'Me'],
+		  [{v:'Jyothsna,Mahesh', f:'Jyothsna,Mahesh<div style="color:green; font-style:italic"><button onclick="BujjiNani()" type="button" style="color:green";>Bujji,Nani</button></div>'},
+           'Lakshmi Narayana,Venkata Narayanamma', 'Bujji,Nani'],
+		  [{v:'Pavan Kumar,Prasanna', f:'Pavan Kumar,Prasanna<div style="color:green; font-style:italic"><button onclick="PavanPrasanna()" type="button" style="color:green";>Pavan Anna,Prasanna Vadina</button></div>'},
+           'Venkateswarlu,Indiramma', 'Pavan Anna,Vadina'],
+		  [{v:'Varun', f:'Varun<div style="color:green; font-style:italic"><button onclick="Varun()" type="button" style="color:green";>Varun Anna</button></div>'},
+           'Venkateswarlu,Indiramma', 'Varun Anna'],
+		  [{v:'Prasanna', f:'Prasanna<div style="color:green; font-style:italic"><button onclick="Prasanna()" type="button" style="color:green";>Prasanna</button></div>'},
+           'Rajendra,Satyavathi', 'Prasanna'],
+		  [{v:'Gowtham', f:'Gowtham<div style="color:green; font-style:italic"><button onclick="Gowtham()" type="button" style="color:green";>Gowtham</button></div>'},
+           'Rajendra,Satyavathi', 'Gowtham'],
+        ]);
+        // Create the chart.
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        // Draw the chart, setting the allowHtml option to true for the tooltips.
+        chart.draw(data, {allowHtml:true});
+      }
+		function JejiyaJeji() {
+		document.getElementById("demo").innerHTML = "Jejiya:: The very first impression of Jejiya is that he is Very Angry.As I grew, came to know that Jejiya worked hard to bring family into this shape.He is always takes pride by farming more produce than competition.In that process indulged his sons into farming.Agreed and allowed them to go school daily.Thanks Jejiya.Poor Jejiya,lacked an awareness on future and urbanisation.Who am I to blame him.He got enough cultivable lands.Always a result oriented.He always likes and admires genuinity and hard work in other people.Never let relative or friend empty stomach/hand when they paid visit.He is always surrounded by people/friends/relatives.He is a people's man,may be because he is kind to every one.";
+		document.getElementById("demo1").innerHTML = "Jeji:: First person to come into our family.No facilities,no plenty of income,hard to imagine how she brought up her 5 children.She is tall,strong both mental and physical.Still walks a kilometre daily to serve a hand in agriculture.Heard that there are few rifts with jejiya in early marriage life(May be because of jejiya temper!).Learned a lot in her 60 years of marriage life.During my last visit to her,she made me a lemon juice which is no ordinary cause,never had one in my 24 years of life.";
+		}
+		function PedananaPedamma() {
+		document.getElementById("demo").innerHTML = "Pedanana:: I grew up by looking at Pedanana as a Very strong and stubborn person.Later on with more interaction with him,I found that he is very soft,delicate inside.Just like a coconut.He is the undoubtedly best farmer that my family produced ever.Man with a enormous amounts of patience.Travels very frequently between Maharashtra and TKG Padu.Always says to me earn quite enough money so that can help one.Afraid of taking impacting decisions and seldom comes late with a perfect decision.";
+		
+		
+		document.getElementById("demo1").innerHTML = "Pedamma:: First person to come into Gaddam's family after Jeji.Quite interesting both are having same name.Bad with cooking few specific dishes and frankly agrees to the fact that she is not best cook in the family.Liked that frankness.Her husband and children are her world.She dont know anything except cooking,washing,praying god.";
+		}
+		function DaddyMummy() {
+		document.getElementById("demo").innerHTML = "Daddy:: Probably, first person to realise the importance of education. Probably favorite child of Jejiya. Hard work at the max doesnt matter whether it is agriculture or education. Always repents that he lacks in guidance , a direction, planning. Genuinity is at its best with him.Doesn't like lying and cheating. Outstanding memory power, may be it is the reason for completion of his education despite the time he got. Always ready to help his friends/colleagues. Found a funny side when he blames mummy and her family for his health condition. He is the best person who can convince Jejiya on a point. He is second quick person in reacting for a situation.Involves in lot of decisioning situations.";
+		document.getElementById("demo1").innerHTML = "Mummy:: She is a person to come from a well lived family. Struggled a bit to adjust to the family. Slowly emerged as a capable hand in dealing many situations like marriages, functions. Her endurance is the best of anyone. She had her own reasons for not being very generous. Got a tag for that, that she is not a very broad mind or very welcoming to the people who visits. She is much disciplined, agile, likes self-respect. Kids can be left at her care without a doubt.";
+		}
+		function NLRbabaipinni() {
+		document.getElementById("demo").innerHTML = "NLR Babai:: Probably favorite child of Jeji. He wants to be perfect at his work and he is. He is having amazing social skills his friends circle is a proof of that. Despite struggles during early stages of his post marriage life, brought his family into a good shape. He loves to be clean, precise, accurate, and neat. Babai, likes to discuss with his brothers before taking a huge decisions. Discussed a lot with me while buying his car.  Having a good skill at cooking. Suggestion seeking may delay decision making. So, rarely comes short of a decision.";
+		document.getElementById("demo1").innerHTML = "Indira Pinni:: When a situation arises, it’s easy to make her panic/worry/tense. Poor Pinni, always there is a health issue for her. Prays a lot to god. In fact, her praying is equal to all of us praying. Always ready to go to temple distance doesn’t matters. Struggled a lot with Babai and always there for him when a supporting hand needed.";
+		}
+		function Rajababaipinni() {
+		document.getElementById("demo").innerHTML = "Raja Babai:: Babai is the youngest of four brothers. Babai is the second most feagreen person after my Daddy. He grew up by taking all the guidance, suggestions from his elder brothers. I saw a great leader and manager in him. Saw lot of those situations where he managed/handled them quite well. He is the quickest of all to react to a situation. Good with humor bad with temper. Praising is his repertoire.";
+		document.getElementById("demo1").innerHTML = "Satyavathi Pinni:: She is a capable person in handling the situations and family simultaneously. She finds herself more effective in agriculture. Best female in the house in terms of agriculture work. Always like to know the trend of a market and keeps up to date. Likes to do shopping often.";
+		}
+		function VenuAnnaVadina() {
+		document.getElementById("demo").innerHTML = "Venu Annaya:: He is a guy which amazing talent at academics and let it come will see/will work attitude. Quite astonishing to see both in a same person. He is very good at studies and got a masters from IIT one of the best colleges in India. He is balayya hardcore fan. A cool head never reacts to situation in haste.";
+		document.getElementById("demo1").innerHTML = "Vadina:: It is hard to keep secrets with her. She is make a slow and steady progress as a housewife who can lead family and struggles/problems simultaneously. Hard to convince her in a first attempt or make her OK for a thing in first time.";
+		}
+		function Narayana() {
+		document.getElementById("demo").innerHTML = "Narayanakka:: Amazing transformation from a girl who played with during her childhood to a housewife leading a joint family successfully. Capable and trustable hand can assign a work to her without a doubt. Found a soothing hand at her always tends me as if I am her own brother. Always Cool, Calm, Smiling.";
+		document.getElementById("demo1").innerHTML = "Narayana Mavayya:: He is a perfect craftsman. Knows many things and sorts mostly all problems in and around the house. Very good with people and maintains the healthy relationships. Well educated, cool head. Never saw him loose temper, almost rare.";
+		}
+		function PadmaNaveen() {
+		document.getElementById("demo").innerHTML = "Padmakka:: She is almost same as Narayanakka. Safe to say both are photocopies in dealing situations, handling pressure and problems. She is much faster than her elder sister and agile. One of the think tank of the family where helps family members with her suggestions on a problem.";
+		document.getElementById("demo1").innerHTML = "Naveen Bava:: He came to our family from a very well lived family with a decent background. He is quite capable person in handling multiple roles and responsibilities. He proved it many times by maintaining healthy relationship with family and leading successful career in teaching and agriculture.";
+		}
+		function Mohan() {
+		document.getElementById("demo").innerHTML = "Mohan:: He is my go to man when he is in the house. Knows many things on how to do it. Able to do many things like agriculture, cooking… Giving injections :P";
+		document.getElementById("demo1").innerHTML = "";
+		}
+		function Me() {
+		document.getElementById("demo").innerHTML = "Me:: He is a man who expects more result from less hard work and more smart work. Always finds an alternative to work, ends up with incompletion of the work and no alternative: P. Not so capable of holding out the temper or any other emotion. Always changing focus from one thing to other. Not so great will power. Comes up with a better solution to a problem. But, always late.";
+		document.getElementById("demo1").innerHTML = "";
+		}
+		function BujjiNani() {
+		document.getElementById("demo").innerHTML = "Bujji:: She never resists herself in asking something to her mom n dad. She is under an impression under a feeling like I am good person all around me are good persons. She cant catch a point at first attempt, slow at doing things. Despite slow, will complete all the household activities with precision. Won’t involve in debates at all.";
+		document.getElementById("demo1").innerHTML = "Nani:: He is 100% supportive to Bujji. Knows many things and talks about them given a chance. Have enough patience to explain things to Bujji.";
+		}
+		function PavanPrasanna() {
+		document.getElementById("demo").innerHTML = "Pavan Anna:: If you may ask whether NLR Babai is perfect. I can’t say neither yes nor no. But that is not the case with Pavan annaya. He is the keenest observer in the family. He is a person with a very long vision, planning and coolness. He is so close to his parents that each and every important decision in his life is not taken without consulting them.";
+		document.getElementById("demo1").innerHTML = "Prasanna Vadina:: Soo sorry Vadina, I don’t know much about you. I can’t write off without knowing much. Except the fact that you are very good at studies always first in the class I reckon.";
+		}
+		function Varun() {
+		document.getElementById("demo").innerHTML = "Varun Anna:: He is not a brother or a cousin to me. He is a good friend of mine. Belongs to same age group that brought us together as friends I guess. He is bad with programming but good with humor. It’s hard to say whether he is friend and good to a person or not. Mastered in controlling temper. If one can desire for a friend, that is Varun Anna.";
+		document.getElementById("demo1").innerHTML = "";
+		}
+		function Prasanna() {
+		document.getElementById("demo").innerHTML = "Prasanna:: A young blood rising very fast to face the challenges. She is promising a very bright and prominent future. Would like to see her in a good position leading a family successfully and holding a good position in job life.";
+		document.getElementById("demo1").innerHTML = "";
+		}
+		function Gowtham() {
+		document.getElementById("demo").innerHTML = "Gowtham:: Aaaah, here is the pocket dynamite. A young ravishing blood. He will grow strong in academics. Would love to see him successful in various activities like sports apart from academics.";
+		document.getElementById("demo1").innerHTML = "";
+		}
+   </script>
+	  
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Gaddam&#39;s Family</h1>
+      <h2 class="project-tagline">Be Kind to One another</h2>
+    </section>
+
+    <section class="main-content">
+      <h1>
+      <a id="will-discuss-about-my-family-here" class="anchor" href="#will-discuss-about-my-family-here" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>An attempt to show insight of my family</h1>
+       
+       <p>Took a step to dive into the family and their individual traits.What they mean to me.To know more click on the buttons below.......</p>
+       </section>
+       <div id='chart_div'></div>
+	<section class="main-content">
+		<p id='demo'></p>
+		<p id='demo1'></p>
+	  </section>
+      <footer class="main-content">
+	      <hr>
+        <span class="main-content"><a href="https://github.com/abdv17/Wish.github.io">Gaddam&#39;s Family</a> is maintained by <a href="https://github.com/abdv17">Sai Gaddam</a>.</span>
+        	<hr>
+      </footer>
+
+    
+
+  
+
+  </body>
+</html>
